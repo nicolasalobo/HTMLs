@@ -10,6 +10,6 @@ Bem-vindo ao meu repositório de HTMLs! Aqui você encontrará todos os arquivos
 
 ## Sobre
 
-Este repositório serve como um registro do meu progresso e aprendizado em HTML. Espero que você ache útil e inspirador!
+Este repositório serve como um registro do meu progresso e aprendizado em HTML, principalmente minhas atividades na faculdade. Espero que você ache útil e inspirador!
 
 Obrigado por visitar meu repositório!
