@@ -1,15 +1,15 @@
 /* Cores e variáveis */
 :root {
-    --cor-primaria: #8300e9; /* Um roxo vibrante */
+    --cor-primaria: #541161; /* Um roxo vibrante */
     --cor-secundaria: #02d8e9; /* Um azul claro */
-    --cor-terciaria: #ff00aa; /* Rosa forte */
+    --cor-terciaria: #ef3167; /* Rosa forte */
     --cor-quaternaria: #00ff6b; /* Verde neon */
     --fundo-escuro: #0b0d17; /* Fundo escuro */
     --fundo-gradiente: linear-gradient(
         135deg,
-        #8300e9,
+        #541161,
         #02d8e9,
-        #ff00aa,
+        #ef3167,
         #00ff6b
     );
     --texto-claro: #ffffff;
@@ -38,8 +38,25 @@ header h2 {
 
 nav {
     display: flex;
-    justify-content: center;
+    flex-direction: row; /* Alinha os itens na horizontal para desktops */
+    flex-wrap: nowrap; /* Não permite quebra de linha no desktop */
+    padding: 10px; /* Ajusta o padding da nav */
     background-color: var(--cor-primaria);
+    align-items: center; /* Centraliza verticalmente os itens na navbar */
+    height: 60px; /* Altura fixa para a navbar */
+}
+
+nav .top-links {
+    display: flex;
+    justify-content: space-around; /* Espaço igual entre os itens */
+    width: 100%; /* Faz com que os links ocupem toda a largura */
+}
+
+nav .social-links {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    margin-top: 10px; /* Espaço entre as linhas */
+    width: 100%; /* Faz com que os ícones ocupem toda a largura */
 }
 
 nav a {
@@ -48,6 +65,8 @@ nav a {
     text-decoration: none;
     text-align: center;
     font-size: 1.1rem;
+    flex: 1; /* Faz com que os itens ocupem espaço igual */
+    min-width: 100px; /* Define uma largura mínima para evitar que quebrem em várias linhas */
 }
 
 nav a:hover {
@@ -96,10 +115,21 @@ footer {
 /* Ajustes para telas menores que 768px (tablets e smartphones) */
 @media only screen and (max-width: 768px) {
     nav {
-        flex-direction: row; /* Alinha os itens na horizontal */
-        flex-wrap: wrap; /* Permite que os itens se ajustem */
-        justify-content: space-between; /* Espaço entre os itens */
+        flex-direction: column; /* Alinha os itens na vertical para mobile */
         padding: 10px; /* Ajusta o padding da nav */
+        height: auto; /* Altura automática para mobile */
+    }
+
+    nav .top-links {
+        display: flex;
+        justify-content: space-between; /* Espaço entre os itens */
+        width: 100%; /* Faz com que os links ocupem toda a largura */
+    }
+
+    nav .social-links {
+        display: flex;
+        justify-content: center; /* Centraliza os ícones */
+        margin-top: 10px; /* Espaço entre as linhas */
     }
 
     nav a {
@@ -129,8 +159,19 @@ footer {
 /* Ajustes para telas menores que 480px (smartphones) */
 @media only screen and (max-width: 480px) {
     nav {
-        flex-direction: row; /* Mantém a direção horizontal */
         padding: 5px; /* Ajusta o padding da nav */
+    }
+
+    nav .top-links {
+        display: flex;
+        justify-content: space-between; /* Espaço entre os itens */
+        width: 100%; /* Faz com que os links ocupem toda a largura */
+    }
+
+    nav .social-links {
+        display: flex;
+        justify-content: center; /* Centraliza os ícones */
+        margin-top: 5px; /* Espaço entre as linhas */
     }
 
     nav a {
