@@ -39,58 +39,55 @@ header h2 {
 
 nav {
     display: flex;
-    flex-direction: row; /* Alinha os itens na horizontal para desktops */
-    flex-wrap: nowrap; /* Não permite quebra de linha no desktop */
-    padding: 10px; /* Ajusta o padding da nav */
+    flex-direction: row; /* Alinha os itens na horizontal */
+    padding: 0; /* Remove padding da nav */
     background-color: var(--cor-primaria);
-    align-items: center; /* Centraliza verticalmente os itens na navbar */
-    height: 60px; /* Altura fixa para a navbar */
+    align-items: stretch; /* Garante que os itens ocupem toda a altura */
+    height: 60px; /* Altura da navbar */
 }
 
-nav .top-links {
+/* Links na parte superior da navbar */
+nav .top-links,
+nav .social-links {
     display: flex;
-    justify-content: space-around; /* Espaço igual entre os itens */
+    justify-content: space-between; /* Espaço igual entre os itens */
     width: 100%; /* Faz com que os links ocupem toda a largura */
 }
 
-nav .social-links {
-    display: flex;
-    justify-content: center; /* Centraliza os ícones */
-    margin-top: 10px; /* Espaço entre as linhas */
-    width: 100%; /* Faz com que os ícones ocupem toda a largura */
-}
-
-nav a {
+nav .top-links a,
+nav .social-links a {
     color: var(--texto-claro);
-    padding: 14px 20px;
+    padding: 0; /* Remove padding dos links */
+    margin: 0; /* Remove margem dos links */
     text-decoration: none;
     text-align: center;
     font-size: 1.1rem;
     flex: 1; /* Faz com que os itens ocupem espaço igual */
-    min-width: 100px; /* Define uma largura mínima para evitar que quebrem em várias linhas */
+    display: flex; /* Permite esticar os links verticalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    height: 100%; /* Garante que os links ocupem 100% da altura da navbar */
 }
 
-nav a:hover {
+/* Efeito de hover nos links */
+nav .top-links a:hover,
+nav .social-links a:hover {
     background-color: var(--cor-terciaria);
 }
 
-nav img {
+/* Tamanho dos ícones sociais */
+nav .social-links img {
+    width: 36px; /* Tamanho maior para os ícones */
+    height: 36px; /* Tamanho maior para os ícones */
     vertical-align: middle;
+    margin: 0 5px; /* Adiciona um pouco de espaço entre os ícones */
 }
 
+/* Estilo das seções */
 .container {
     padding: 20px;
 }
 
-/* Fundo em gradiente */
-.section-gradiente {
-    background: var(--fundo-gradiente);
-    padding: 50px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-/* Estilo das seções */
 section h2 {
     color: var(--texto-claro);
     margin-bottom: 10px;
@@ -102,13 +99,17 @@ section p {
     color: var(--texto-claro);
 }
 
-/* Rodapé */
-footer {
-    background-color: var(--fundo-escuro);
-    color: var(--texto-claro);
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+.minha-foto {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+    position: relative; /* Define a posição relativa */
+    top: 0; /* Posiciona a imagem logo abaixo da navbar */
+    z-index: -1; /* Faz com que a imagem fique atrás do conteúdo */
+}
+
+.container {
+    position: relative; /* Garante que o conteúdo seja posicionado acima da imagem */
+    z-index: 1; /* Define um índice z maior para o conteúdo */
 }
 
 /* Media Queries para responsividade */
@@ -116,26 +117,18 @@ footer {
 @media only screen and (max-width: 768px) {
     nav {
         flex-direction: column; /* Alinha os itens na vertical para mobile */
-        padding: 10px; /* Ajusta o padding da nav */
         height: auto; /* Altura automática para mobile */
     }
 
-    nav .top-links {
-        display: flex;
-        justify-content: space-between; /* Espaço entre os itens */
-        width: 100%; /* Faz com que os links ocupem toda a largura */
-    }
-
+    nav .top-links,
     nav .social-links {
-        display: flex;
-        justify-content: center; /* Centraliza os ícones */
-        margin-top: 10px; /* Espaço entre as linhas */
+        width: 100%; /* Faz com que todos os links ocupem toda a largura */
+        justify-content: space-around; /* Espaço igual entre os itens */
     }
 
     nav a {
         padding: 10px;
         font-size: 1rem;
-        flex: 1 0 auto; /* Permite que os itens se expandam e se ajustem */
         text-align: center; /* Centraliza o texto */
     }
 
@@ -162,16 +155,10 @@ footer {
         padding: 5px; /* Ajusta o padding da nav */
     }
 
-    nav .top-links {
-        display: flex;
-        justify-content: space-between; /* Espaço entre os itens */
-        width: 100%; /* Faz com que os links ocupem toda a largura */
-    }
-
+    nav .top-links,
     nav .social-links {
-        display: flex;
-        justify-content: center; /* Centraliza os ícones */
-        margin-top: 5px; /* Espaço entre as linhas */
+        flex-direction: row; /* Mantém os links sociais na mesma linha */
+        justify-content: center; /* Centraliza os links */
     }
 
     nav a {
