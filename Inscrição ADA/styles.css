@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /* Cores e variáveis */
 :root {
     --cor-primaria: #541161; /* Um roxo vibrante */
@@ -17,7 +19,7 @@
 
 /* Estilo geral */
 body {
-    font-family: "Arial", sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Altera a fonte para Montserrat */
     background-color: var(--fundo-escuro);
     color: var(--texto-claro);
     margin: 0;
