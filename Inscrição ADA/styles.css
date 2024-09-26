@@ -32,8 +32,8 @@
   
   header h1,
   header h2 {
-    color: var(--cor-primaria);
-    text-shadow: 2px 2px var(--cor-secundaria);
+    color: var(--texto-claro);
+    text-shadow: 2px 2px var(--fundo-escuro);
   }
   
   nav {
