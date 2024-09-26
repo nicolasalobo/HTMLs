@@ -42,8 +42,8 @@ nav {
     flex-direction: row; /* Alinha os itens na horizontal */
     padding: 0; /* Remove padding da nav */
     background-color: var(--cor-primaria);
-    align-items: stretch; /* Garante que os itens ocupem toda a altura */
-    height: 60px; /* Altura da navbar */
+    align-items: center; /* Centraliza verticalmente os itens na navbar */
+    height: 60px; /* Altura reduzida da navbar */
 }
 
 /* Links na parte superior da navbar */
@@ -66,7 +66,6 @@ nav .social-links a {
     display: flex; /* Permite esticar os links verticalmente */
     align-items: center; /* Centraliza o texto verticalmente */
     justify-content: center; /* Centraliza o texto horizontalmente */
-    height: 100%; /* Garante que os links ocupem 100% da altura da navbar */
 }
 
 /* Efeito de hover nos links */
@@ -99,12 +98,13 @@ section p {
     color: var(--texto-claro);
 }
 
-.minha-foto {
-    width: 100%; /* Faz com que a imagem ocupe toda a largura da tela */
-    height: auto; /* Mantém a proporção da imagem */
-    position: relative; /* Define a posição relativa */
-    top: 0; /* Posiciona a imagem logo abaixo da navbar */
-    z-index: -1; /* Faz com que a imagem fique atrás do conteúdo */
+.parallax {
+    background-image: url('imagens/fotocapa.jpg'); /* Caminho correto da sua imagem */
+    height: 400px; /* Altura total da seção parallax */
+    background-attachment: fixed; /* Faz o efeito parallax */
+    background-position: top center; /* Fixa a parte superior da imagem na navbar */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a seção */
 }
 
 .container {
@@ -146,6 +146,10 @@ section p {
 
     section p {
         font-size: 1rem;
+    }
+
+    .parallax {
+        height: 200px; /* Altura menor para mobile */
     }
 }
 
