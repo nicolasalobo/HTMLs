@@ -26,24 +26,32 @@ body {
     padding: 0;
 }
 
+/* Header menor */
 header {
-    background-color: var(--fundo-escuro);
-    padding: 20px;
+    height: 8vh; /* Agora o header ocupa 5% da altura da tela */
+    background-color: var(--fundo-escuro); /* Manter a cor de fundo */
+    padding: 5px; /* Reduzido o padding */
     text-align: center;
 }
 
-header h1,
-header h2 {
-    color: var(--texto-claro);
+header h1 {
+    font-size: 1.8rem; /* Ajusta o tamanho do título */
+    margin: 0;
 }
 
+header h2 {
+    font-size: 1rem; /* Ajusta o tamanho do subtítulo */
+    margin-top: 5px; /* Adiciona espaço entre o título e o subtítulo */
+}
+
+/* Navbar */
 nav {
-    display: flex;
-    flex-direction: row; /* Alinha os itens na horizontal */
-    padding: 0; /* Remove padding da nav */
+    height: 6vh; /* A navbar mantém 6% da altura da tela */
     background-color: var(--cor-primaria);
-    align-items: center; /* Centraliza verticalmente os itens na navbar */
-    height: 60px; /* Altura reduzida da navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }
 
 /* Links na parte superior da navbar */
@@ -82,9 +90,21 @@ nav .social-links img {
     margin: 0 5px; /* Adiciona um pouco de espaço entre os ícones */
 }
 
+/* Parallax da Imagem */
+.parallax {
+    background-image: url('imagens/fotocapapronta.png'); /* Caminho correto da imagem */
+    height: 86vh; /* O restante da tela (89%) é ocupado pela imagem */
+    background-attachment: fixed; /* Mantém o efeito parallax */
+    background-position: top center; /* Fixa o topo da imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-size: cover; /* A imagem cobre toda a área */
+}
+
 /* Estilo das seções */
 .container {
     padding: 20px;
+    position: relative; /* Garante que o conteúdo seja posicionado acima da imagem */
+    z-index: 1; /* Define um índice z maior para o conteúdo */
 }
 
 section h2 {
@@ -98,23 +118,18 @@ section p {
     color: var(--texto-claro);
 }
 
-.parallax {
-    background-image: url('imagens/fotocapa.jpg'); /* Caminho correto da sua imagem */
-    height: 400px; /* Altura total da seção parallax */
-    background-attachment: fixed; /* Faz o efeito parallax */
-    background-position: top center; /* Fixa a parte superior da imagem na navbar */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a seção */
-}
-
-.container {
-    position: relative; /* Garante que o conteúdo seja posicionado acima da imagem */
-    z-index: 1; /* Define um índice z maior para o conteúdo */
-}
-
 /* Media Queries para responsividade */
 /* Ajustes para telas menores que 768px (tablets e smartphones) */
 @media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    header h2 {
+        font-size: 1rem; /* Reduz o tamanho da fonte em telas menores */
+        margin-top: 5px;
+    }
+
     nav {
         flex-direction: column; /* Alinha os itens na vertical para mobile */
         height: auto; /* Altura automática para mobile */
@@ -136,20 +151,8 @@ section p {
         padding: 10px;
     }
 
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header h2 {
-        font-size: 1.4rem;
-    }
-
     section p {
         font-size: 1rem;
-    }
-
-    .parallax {
-        height: 200px; /* Altura menor para mobile */
     }
 }
 
