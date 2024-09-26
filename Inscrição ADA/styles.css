@@ -1,90 +1,83 @@
-/* Cores inspiradas na imagem */
+/* Cores e variáveis */
 :root {
-    --cor-primaria: #8300e9; /* Um roxo vibrante */
-    --cor-secundaria: #02d8e9; /* Um azul claro */
-    --cor-terciaria: #ff00aa; /* Rosa forte */
-    --cor-quaternaria: #00ff6b; /* Verde neon */
-    --fundo-escuro: #0b0d17; /* Fundo escuro */
-    --fundo-gradiente: linear-gradient(
-      135deg,
-      #8300e9,
-      #02d8e9,
-      #ff00aa,
-      #00ff6b
-    );
+    --cor-primaria: #8300e9;
+    --cor-secundaria: #02d8e9;
+    --cor-terciaria: #ff00aa;
+    --cor-quaternaria: #00ff6b;
+    --fundo-escuro: #0b0d17;
+    --fundo-gradiente: linear-gradient(135deg, #8300e9, #02d8e9, #ff00aa, #00ff6b);
     --texto-claro: #ffffff;
-  }
-  
-  /* Estilo geral */
-  body {
+}
+
+/* Estilo geral */
+body {
     font-family: "Arial", sans-serif;
     background-color: var(--fundo-escuro);
     color: var(--texto-claro);
     margin: 0;
     padding: 0;
-  }
-  
-  header {
+}
+
+header {
     background-color: var(--fundo-escuro);
     padding: 20px;
     text-align: center;
-  }
-  
-  header h1,
-  header h2 {
+}
+
+header h1, header h2 {
     color: var(--texto-claro);
     text-shadow: 2px 2px var(--fundo-escuro);
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     justify-content: center;
     background-color: var(--cor-primaria);
-  }
-  
-  nav a {
+}
+
+nav a {
     color: var(--texto-claro);
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
     font-size: 1.1rem;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     background-color: var(--cor-terciaria);
-  }
-  
-  nav img {
+}
+
+nav img {
     vertical-align: middle;
-  }
-  
-  .container {
+}
+
+.container {
     padding: 20px;
-  }
-  
-  /* Fundo em gradiente */
-  .section-gradiente {
+}
+
+/* Fundo em gradiente */
+.section-gradiente {
     background: var(--fundo-gradiente);
     padding: 50px;
     border-radius: 15px;
     text-align: center;
-  }
-  
-  /* Estilo das seções */
-  section h2 {
+}
+
+/* Estilo das seções */
+section h2 {
     color: var(--texto-claro);
     text-shadow: 1px 1px var(--cor-secundaria);
     margin-bottom: 10px;
-  }
-  
-  section p {
+}
+
+section p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: var(--texto-claro);
-  }
-  
-  /* Botões */
-  button {
+}
+
+/* Botões */
+button {
     background-color: var(--cor-secundaria);
     border: none;
     color: var(--texto-claro);
@@ -94,17 +87,71 @@
     cursor: pointer;
     border-radius: 50px;
     transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: var(--cor-primaria);
-  }
-  
-  /* Rodapé */
-  footer {
+}
+
+/* Rodapé */
+footer {
     background-color: var(--fundo-escuro);
     color: var(--texto-claro);
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-  }
+}
+
+/* Media Queries para responsividade */
+/* Ajustes para telas menores que 768px (tablets e smartphones) */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1.4rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes para telas menores que 480px (smartphones) */
+@media only screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+}
