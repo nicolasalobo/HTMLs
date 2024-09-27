@@ -101,10 +101,15 @@ nav .top-links a img {
 
 section {
     flex: 1; /* Faz com que todas as seções tenham o mesmo tamanho */
-    margin: 0 10px; /* Espaçamento horizontal entre as seções */
+    margin: 0 3px; /* Espaçamento horizontal entre as seções */
     background-color: var(--fundo-cinza-escuro); /* Fundo cinza escuro */
     padding: 20px; /* Ajuste de espaçamento interno */
     box-sizing: border-box; /* Garante que o padding seja incluído nas dimensões da seção */
+
+    display: flex /* Ativa o Flexbox */;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 section h2 {
