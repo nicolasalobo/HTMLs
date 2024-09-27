@@ -111,12 +111,21 @@ section p {
 @media only screen and (max-width: 768px) {
     nav {
         flex-direction: column;
-        height: auto;
+        height: auto; /* Ajuste para altura automática */
     }
 
     nav .top-links {
-        width: 100%;
-        justify-content: space-around;
+        display: flex; /* Usar flexbox */
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+        justify-content: space-between; /* Distribui o espaço entre os itens */
+        width: 100%; /* Faz a barra ocupar toda a largura */
+    }
+
+    nav .top-links a,
+    nav .top-links .logo {
+        flex: 0 1 22%; /* Define uma largura básica de 22% */
+        box-sizing: border-box; /* Garante que o padding e as bordas sejam incluídos na largura */
+        margin: 5px; /* Adiciona um pouco de espaçamento entre os itens */
     }
 
     nav a {
@@ -140,14 +149,19 @@ section p {
     }
 
     nav .top-links {
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row; /* Mantenha em linha para telas menores */
+        justify-content: space-around; /* Espaçamento entre os itens */
+    }
+
+    nav .top-links a,
+    nav .top-links .logo {
+        flex: 0 1 45%; /* Define uma largura básica de 45% */
+        margin: 5px; /* Espaçamento entre os itens */
     }
 
     nav a {
         font-size: 0.9rem;
         padding: 8px;
-        flex: 1 0 auto;
     }
 
     .container {
