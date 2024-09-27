@@ -7,6 +7,9 @@
     --cor-quaternaria: #00ff6b;
     --fundo-escuro: #0b0d17;
     --texto-claro: #ffffff;
+    --hover-contorno: #ffffff;
+    --fundo-cinza: #f0f0f0;
+    --fundo-cinza-escuro: #1c1c1c;
 }
 
 body {
@@ -21,45 +24,56 @@ nav {
     height: 6vh;
     background-image: linear-gradient(to bottom, rgba(84, 17, 97, 0.8), rgba(84, 17, 97, 0.4));
     display: flex;
-    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 nav .top-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
 }
 
-nav .top-links a,
-nav .top-links .logo {
+nav .logo {
+    margin-left: 20px;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+nav .top-links a {
     color: var(--texto-claro);
     text-decoration: none;
     text-align: center;
     font-size: 1.1rem;
-    flex: 1;
+    padding: 0 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100%;
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    border-right: 2px solid rgba(255, 255, 255, 0.2); /* Borda à direita */
+    position: relative;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border 0.3s;
 }
 
-nav .top-links a:last-child {
-    border-right: none; /* Remove a borda do último botão */
+nav .top-links a:not(:first-child) {
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+nav .top-links a:first-child {
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 nav .top-links a:hover {
     background-color: var(--cor-terciaria);
-}
-
-nav .top-links img {
-    width: 36px;
-    height: 36px;
-    margin: 0 5px;
+    border: 2px solid var(--hover-contorno);
+    transition: background-color 0.3s, border 0.3s;
 }
 
 .parallax {
@@ -69,77 +83,59 @@ nav .top-links img {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative; /* Certifique-se de que a posição é relativa */
-    display: flex; /* Adiciona flexbox */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-}
-
-.container {
-    padding: 20px;
     position: relative;
-    z-index: 1;
-}
-
-section h2 {
-    color: var(--texto-claro);
-    margin-bottom: 10px;
-}
-
-section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--texto-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .parallax-text {
-    max-width: 800px; /* Limita a largura do texto */
-    margin: 0 auto; /* Centraliza o texto horizontalmente */
-    padding: 20px; /* Adiciona algum espaçamento interno */
-    text-align: center; /* Centraliza o texto dentro do contêiner */
-    color: var(--texto-claro); /* Mantém a cor do texto */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: var(--texto-claro);
 }
 
 .parallax-text h1 {
-    font-size: 2.5rem; /* Tamanho do título */
+    font-size: 2.5rem;
 }
 
 .parallax-text p {
-    font-size: 1.2rem; /* Tamanho do parágrafo */
+    font-size: 1.2rem;
+}
+
+/* Estilo para a nova seção com fundo cinza */
+.new-section {
+    background-color: var(--fundo-cinza-escuro); /* Fundo cinza escuro */
+    padding: 50px 20px; /* Ajuste de espaçamento */
+    min-height: 400px; /* Define uma altura mínima para essa seção */
 }
 
 @media only screen and (max-width: 768px) {
     nav {
         flex-direction: column;
-        height: auto; /* Ajuste para altura automática */
+        height: auto;
     }
 
     nav .top-links {
-        display: flex; /* Usar flexbox */
-        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-        justify-content: space-between; /* Distribui o espaço entre os itens */
-        width: 100%; /* Faz a barra ocupar toda a largura */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
     }
 
     nav .top-links a,
     nav .top-links .logo {
-        flex: 0 1 22%; /* Define uma largura básica de 22% */
-        box-sizing: border-box; /* Garante que o padding e as bordas sejam incluídos na largura */
-        margin: 5px; /* Adiciona um pouco de espaçamento entre os itens */
+        flex: 1 0 21%;
+        box-sizing: border-box;
+        margin: 5px;
     }
 
     nav a {
         padding: 10px;
         font-size: 1rem;
         text-align: center;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    section p {
-        font-size: 1rem;
     }
 }
 
@@ -149,22 +145,41 @@ section p {
     }
 
     nav .top-links {
-        flex-direction: row; /* Mantenha em linha para telas menores */
-        justify-content: space-around; /* Espaçamento entre os itens */
-    }
-
-    nav .top-links a,
-    nav .top-links .logo {
-        flex: 0 1 45%; /* Define uma largura básica de 45% */
-        margin: 5px; /* Espaçamento entre os itens */
+        flex-direction: column;
+        justify-content: center;
     }
 
     nav a {
         font-size: 0.9rem;
         padding: 8px;
+        flex: 1 0 auto;
     }
+}
 
-    .container {
-        padding: 5px;
-    }
+footer {
+    background-image: linear-gradient(to bottom, rgba(84, 17, 97, 0.8), rgba(84, 17, 97, 0.4));
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: var(--texto-claro);
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.footer-links a:hover {
+    background-color: var(--cor-terciaria);
+    border: 2px solid var(--hover-contorno);
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.footer-links img {
+    width: 36px;
+    height: 36px;
 }
