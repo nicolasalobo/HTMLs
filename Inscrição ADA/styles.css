@@ -69,6 +69,10 @@ nav .top-links img {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative; /* Certifique-se de que a posição é relativa */
+    display: flex; /* Adiciona flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
 }
 
 .container {
@@ -86,6 +90,22 @@ section p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: var(--texto-claro);
+}
+
+.parallax-text {
+    max-width: 800px; /* Limita a largura do texto */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+    padding: 20px; /* Adiciona algum espaçamento interno */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    color: var(--texto-claro); /* Mantém a cor do texto */
+}
+
+.parallax-text h1 {
+    font-size: 2.5rem; /* Tamanho do título */
+}
+
+.parallax-text p {
+    font-size: 1.2rem; /* Tamanho do parágrafo */
 }
 
 @media only screen and (max-width: 768px) {
