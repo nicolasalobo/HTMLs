@@ -7,9 +7,8 @@
     --cor-quaternaria: #00ff6b;
     --fundo-escuro: #0b0d17;
     --texto-claro: #ffffff;
-    --hover-contorno: #ffffff;
-    --fundo-cinza: #f0f0f0;
-    --fundo-cinza-escuro: #1c1c1c;
+    --hover-contorno: #ffffff; /* Cor branca para o contorno do hover */
+    --fundo-cinza-escuro: #1c1c1c; /* Fundo cinza escuro */
 }
 
 body {
@@ -24,27 +23,27 @@ nav {
     height: 6vh;
     background-image: linear-gradient(to bottom, rgba(84, 17, 97, 0.8), rgba(84, 17, 97, 0.4));
     display: flex;
-    align-items: center;
-    box-sizing: border-box;
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    box-sizing: border-box; /* Garante que o padding e as bordas estejam dentro do tamanho da navbar */
 }
 
 nav .top-links {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Alinhamento à esquerda */
     width: 100%;
     height: 100%;
 }
 
 nav .logo {
-    margin-left: 20px;
-    align-self: center;
-    font-size: 1.5rem;
+    margin-left: 20px; /* Margem à esquerda do logo */
+    align-self: center; /* Centraliza verticalmente o logo */
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte do logo */
 }
 
 .nav-right {
     display: flex;
-    justify-content: flex-end;
-    flex: 1;
+    justify-content: flex-end; /* Alinha os botões da navbar à direita */
+    flex: 1; /* Faz com que essa div ocupe o espaço restante */
 }
 
 nav .top-links a {
@@ -52,28 +51,34 @@ nav .top-links a {
     text-decoration: none;
     text-align: center;
     font-size: 1.1rem;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-    position: relative;
-    border: 2px solid transparent;
-    transition: background-color 0.3s, border 0.3s;
+    padding: 0 15px; /* Adiciona um padding horizontal para os links */
+    display: flex; /* Para usar o alinhamento central */
+    align-items: center; /* Centraliza verticalmente os links */
+    height: 100%; /* Certifique-se de que os links ocupem a altura total da navbar */
+    box-sizing: border-box; /* Garante que o contorno fique dentro do botão */
+    position: relative; /* Para posicionar a borda corretamente */
+    border: 2px solid transparent; /* Define a borda transparente inicialmente */
+    transition: background-color 0.3s, border 0.3s; /* Suave transição para a borda */
 }
 
 nav .top-links a:not(:first-child) {
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2); /* Borda à esquerda de todos os itens exceto o primeiro */
 }
 
 nav .top-links a:first-child {
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(255, 255, 255, 0.2); /* Adiciona a borda à esquerda do primeiro item ("Currículo") */
 }
 
 nav .top-links a:hover {
     background-color: var(--cor-terciaria);
-    border: 2px solid var(--hover-contorno);
-    transition: background-color 0.3s, border 0.3s;
+    border: 2px solid var(--hover-contorno); /* Borda branca ao passar o mouse */
+    transition: background-color 0.3s, border 0.3s; /* Suave transição para a borda */
+}
+
+nav .top-links a img {
+    width: 36px;
+    height: 36px;
+    margin: 0 5px;
 }
 
 .parallax {
@@ -87,6 +92,30 @@ nav .top-links a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+}
+
+section {
+    flex: 1; /* Faz com que todas as seções tenham o mesmo tamanho */
+    margin: 0 10px; /* Espaçamento horizontal entre as seções */
+    background-color: var(--fundo-cinza-escuro); /* Fundo cinza escuro */
+    padding: 20px; /* Ajuste de espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding seja incluído nas dimensões da seção */
+}
+
+section h2 {
+    color: var(--texto-claro);
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--texto-claro);
 }
 
 .parallax-text {
@@ -103,13 +132,6 @@ nav .top-links a:hover {
 
 .parallax-text p {
     font-size: 1.2rem;
-}
-
-/* Estilo para a nova seção com fundo cinza */
-.new-section {
-    background-color: var(--fundo-cinza-escuro); /* Fundo cinza escuro */
-    padding: 50px 20px; /* Ajuste de espaçamento */
-    min-height: 400px; /* Define uma altura mínima para essa seção */
 }
 
 @media only screen and (max-width: 768px) {
@@ -137,6 +159,14 @@ nav .top-links a:hover {
         font-size: 1rem;
         text-align: center;
     }
+
+    .container {
+        padding: 10px;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -154,10 +184,14 @@ nav .top-links a:hover {
         padding: 8px;
         flex: 1 0 auto;
     }
+
+    .container {
+        padding: 5px;
+    }
 }
 
 footer {
-    background-image: linear-gradient(to bottom, rgba(84, 17, 97, 0.8), rgba(84, 17, 97, 0.4));
+    background-image: linear-gradient(to bottom, rgba(84, 17, 97, 0.8), rgba(84, 17, 97, 0.4)); /* Mesmo gradiente da navbar */
     padding: 10px 0;
     text-align: center;
 }
@@ -169,14 +203,14 @@ footer {
     display: inline-block;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid transparent;
-    transition: background-color 0.3s, border 0.3s;
+    border: 2px solid transparent; /* Borda transparente inicialmente */
+    transition: background-color 0.3s, border 0.3s; /* Suave transição para a borda */
 }
 
 .footer-links a:hover {
     background-color: var(--cor-terciaria);
-    border: 2px solid var(--hover-contorno);
-    transition: background-color 0.3s, border 0.3s;
+    border: 2px solid var(--hover-contorno); /* Borda branca ao passar o mouse */
+    transition: background-color 0.3s, border 0.3s; /* Suave transição para a borda */
 }
 
 .footer-links img {
