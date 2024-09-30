@@ -1,313 +1,478 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
+/* Variáveis de cores */
 :root {
-  --cor-primaria: #541161;
-  --cor-secundaria: #02d8e9;
-  --cor-terciaria: #ef3167;
-  --cor-quaternaria: #00ff6b;
-  --fundo-escuro: #0b0d17;
-  --texto-claro: #ffffff;
-  --hover-contorno: #ffffff; /* Cor branca para o contorno do hover */
-  --fundo-cinza-escuro: #1c1c1c; /* Fundo cinza escuro */
+    --cor-primaria: #541161;
+    --cor-secundaria: #02d8e9;
+    --cor-terciaria: #ef3167;
+    --cor-quaternaria: #00ff6b;
+    --fundo-escuro: #0b0d17;
+    --texto-claro: #ffffff;
+    --hover-contorno: #ffffff;
+    --fundo-cinza-escuro: #1c1c1c;
 }
 
+/* Estilos gerais do corpo */
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: var(--fundo-escuro);
-  color: var(--texto-claro);
-  margin: 0;
-  padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilos do menu de navegação */
 nav {
-  height: 6vh;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(84, 17, 97, 0.8),
-    rgba(84, 17, 97, 0.4)
-  );
-  display: flex;
-  align-items: center; /* Alinha os itens verticalmente no centro */
-  box-sizing: border-box; /* Garante que o padding e as bordas estejam dentro do tamanho da navbar */
+    height: 6vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(84, 17, 97, 0.8),
+        rgba(84, 17, 97, 0.4)
+    );
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 nav .top-links {
-  display: flex;
-  justify-content: flex-start; /* Alinhamento à esquerda */
-  width: 100%;
-  height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
 }
 
 nav .logo {
-  margin-left: 20px; /* Margem à esquerda do logo */
-  align-self: center; /* Centraliza verticalmente o logo */
-  font-size: 1.5rem; /* Aumenta o tamanho da fonte do logo */
+    margin-left: 20px;
+    align-self: center;
+    font-size: 1.5rem;
 }
 
 .nav-right {
-  display: flex;
-  justify-content: flex-end; /* Alinha os botões da navbar à direita */
-  flex: 1; /* Faz com que essa div ocupe o espaço restante */
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 nav .top-links a {
-  color: var(--texto-claro);
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.1rem;
-  padding: 0 15px; /* Adiciona um padding horizontal para os links */
-  display: flex; /* Para usar o alinhamento central */
-  align-items: center; /* Centraliza verticalmente os links */
-  height: 100%; /* Certifique-se de que os links ocupem a altura total da navbar */
-  box-sizing: border-box; /* Garante que o contorno fique dentro do botão */
-  position: relative; /* Para posicionar a borda corretamente */
-  border: 2px solid transparent; /* Define a borda transparente inicialmente */
-  transition: background-color 0.3s, border 0.3s; /* Suave transição para a borda */
+    color: var(--texto-claro);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border 0.3s;
 }
 
 nav .top-links a:not(:first-child) {
-  border-left: 2px solid rgba(255, 255, 255, 0.2); /* Borda à esquerda de todos os itens exceto o primeiro */
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 nav .top-links a:first-child {
-  border-left: 2px solid rgba(255, 255, 255, 0.2); /* Adiciona a borda à esquerda do primeiro item ("Currículo") */
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 nav .top-links a:hover {
-  background-color: var(--cor-terciaria);
-  border: 2px solid var(--hover-contorno); /* Borda branca ao passar o mouse */
-  transition: background-color 0.3s, border 0.3s; /* Suave transição para a borda */
+    background-color: var(--cor-terciaria);
+    border: 2px solid var(--hover-contorno);
+    transition: background-color 0.3s, border 0.3s;
 }
 
 nav .top-links a img {
-  width: 36px;
-  height: 36px;
+    width: 36px;
+    height: 36px;
 }
 
+/* Estilos da seção parallax */
 .parallax {
-  background-image: url("imagens/fotocapapronta.png");
-  height: 94vh;
-  background-attachment: fixed;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-image: url("imagens/fotocapapronta.png");
+    height: 94vh;
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Container principal */
 .container {
-  margin-bottom: 10px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 5px;
-  padding: 0 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5px;
+    padding: 0 10px;
 }
 
+/* Estilos das seções */
 section {
-  border-radius: 5px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  background-color: var(--fundo-cinza-escuro);
-  padding: 10px 20px;
-  box-sizing: border-box;
-  overflow: hidden;
+    border-radius: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: var(--fundo-cinza-escuro);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 section h2 {
-  margin-top: 5px;
-  color: var(--texto-claro);
-  margin-bottom: 10px;
+    margin-top: 5px;
+    color: var(--texto-claro);
+    margin-bottom: 10px;
 }
 
 section p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: var(--texto-claro);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--texto-claro);
 }
 
+/* Texto da seção parallax */
 .parallax-text {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  color: var(--texto-claro);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: var(--texto-claro);
 }
 
 .parallax-text h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 .parallax-text p {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
-/* Timeline */
+/* Container da linha do tempo */
 .timeline-container {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Itens da linha do tempo */
 .timeline-item {
-  position: relative;
-  padding-left: 160px; /* Espaço para a data */
-  margin-bottom: 40px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
+    flex-direction: row;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .timeline-item::before {
-  content: "";
-  position: absolute;
-  left: 120px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #3a3a3a;
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #3a3a3a;
 }
 
 .timeline-date {
-  max-width: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 14px;
-  color: #fff;
-  white-space: normal;
-  word-wrap: break-word;
+    margin-right: 10px;
+    max-width: 100px;
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    color: #fff;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .timeline-content {
-  background-color: #2a2a2a;
-  padding: 20px;
-  border-radius: 5px;
-  word-wrap: break-word;
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 500px; /* Limitar a largura da caixa de conteúdo */
-  word-break: normal; /* Impedir que as palavras quebrem verticalmente */
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: calc(100% - 30px);
+    max-width: 500px;
+    word-break: normal;
 }
 
 .timeline-content h3 {
-  margin-bottom: 10px;
-  font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
 .timeline-content p {
-  font-size: 16px;
-  color: #555;
+    font-size: 16px;
+    color: #555;
 }
 
 .timeline-item::after {
-  content: "";
-  position: absolute;
-  left: 115px;
-  top: 10px;
-  width: 10px;
-  height: 10px;
-  background-color: #3a3a3a;
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #3a3a3a;
+    border-radius: 50%;
 }
 
-/* Animação */
+/* Animação de fade in */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Estilos do rodapé */
 footer {
-  margin-top: 10px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(84, 17, 97, 0.8),
-    rgba(84, 17, 97, 0.4)
-  ); /* Mesmo gradiente da navbar */
-  padding: 10px 0;
-  text-align: center;
+    margin-top: 10px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(84, 17, 97, 0.8),
+        rgba(84, 17, 97, 0.4)
+    );
+    padding: 10px 0;
+    text-align: center;
 }
 
 .footer-links a {
-  color: var(--texto-claro);
-  margin: 0 10px;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid transparent; /* Borda transparente inicialmente */
-  transition: background-color 0.3s, border 0.3s; /* Suave transição para a borda */
+    color: var(--texto-claro);
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border 0.3s;
 }
 
 .footer-links a:hover {
-  background-color: var(--cor-terciaria);
-  border: 2px solid var(--hover-contorno); /* Borda branca ao passar o mouse */
-  transition: background-color 0.3s, border 0.3s; /* Suave transição para a borda */
+    background-color: var(--cor-terciaria);
+    border: 2px solid var(--hover-contorno);
+    transition: background-color 0.3s, border 0.3s;
 }
 
 .footer-links img {
-  width: 36px;
-  height: 36px;
+    width: 36px;
+    height: 36px;
 }
 
+/* Novo container */
 .novo-container {
-  background-color: var(
-    --fundo-cinza-escuro
-  ); /* Mesmo fundo do container original */
-  margin: 10px; /* Margem superior e inferior */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 5px;
-  text-align: center;
+    background-color: var(--fundo-cinza-escuro);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
 }
 
+/* Caixa larga */
 .caixa-larga {
-  background-color: #2a2a2a; /* Mesma cor das caixas anteriores */
-  padding: 20px;
-  border-radius: 5px;
-  width: calc(100% - 40px); /* Largura da tela menos 40px de margem */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  color: var(--texto-claro); /* Cor do texto */
-  box-sizing: border-box;
-  transition: transform 0.3s, box-shadow 0.3s ease-in-out; /* Transição suave */
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    color: var(--texto-claro);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
 }
 
 .caixa-larga:hover {
-    transform: translateY(-10px); /* Move a caixa para cima */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
-  }
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 .caixa-larga h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .caixa-larga p {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .caixa-larga a {
-  color: var(--cor-terciaria);
-  text-decoration: none;
-  border-bottom: 2px solid var(--cor-terciaria);
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    border-bottom: 2px solid var(--cor-terciaria);
 }
 
 .caixa-larga a:hover {
-  color: var(--cor-quaternaria);
-  border-bottom: 2px solid var(--cor-quaternaria);
+    color: var(--cor-quaternaria);
+    border-bottom: 2px solid var(--cor-quaternaria);
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 1.2rem;
+    }
+
+    nav .top-links a {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .parallax-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .parallax-text p {
+        font-size: 1rem;
+    }
+
+    .timeline-date {
+        font-size: 10px;
+    }
+
+    .timeline-content h3 {
+        font-size: 20px;
+    }
+
+    .timeline-content p {
+        font-size: 14px;
+    }
+
+    .caixa-larga h3 {
+        font-size: 20px;
+    }
+
+    .caixa-larga p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    nav .logo {
+        font-size: 1.4rem;
+    }
+
+    nav .top-links a {
+        font-size: 1rem;
+        padding: 0 12px;
+    }
+
+    .parallax-text h1 {
+        font-size: 2rem;
+    }
+
+    .parallax-text p {
+        font-size: 1.1rem;
+    }
+
+    .timeline-date {
+        font-size: 11px;
+    }
+
+    .timeline-content h3 {
+        font-size: 22px;
+    }
+
+    .timeline-content p {
+        font-size: 15px;
+    }
+
+    .caixa-larga h3 {
+        font-size: 22px;
+    }
+
+    .caixa-larga p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav .logo {
+        font-size: 1.6rem;
+    }
+
+    nav .top-links a {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    .parallax-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .parallax-text p {
+        font-size: 1.2rem;
+    }
+
+    .timeline-date {
+        font-size: 12px;
+    }
+
+    .timeline-content h3 {
+        font-size: 24px;
+    }
+
+    .timeline-content p {
+        font-size: 16px;
+    }
+
+    .caixa-larga h3 {
+        font-size: 24px;
+    }
+
+    .caixa-larga p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    nav .logo {
+        font-size: 1.8rem;
+    }
+
+    nav .top-links a {
+        font-size: 1.2rem;
+    }
+
+    .parallax-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .parallax-text p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    nav .logo {
+        font-size: 2rem;
+    }
+
+    nav .top-links a {
+        font-size: 1.3rem;
+    }
+
+    .parallax-text h1 {
+        font-size: 3rem;
+    }
+
+    .parallax-text p {
+        font-size: 1.5rem;
+    }
 }
