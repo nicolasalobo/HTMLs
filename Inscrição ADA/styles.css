@@ -87,7 +87,7 @@ nav .top-links a img {
     height: 36px;
 }
 
-/* Estilos da seção parallax */
+/* Seção parallax */
 .parallax {
     background-image: url("imagens/fotocapapronta.png");
     height: 94vh;
@@ -323,14 +323,14 @@ footer {
     border-bottom: 2px solid var(--cor-quaternaria);
 }
 
-/* Estilos para telas de até 768px */
+/* Estilos responsivos para telas de até 768px */
 @media (max-width: 768px) {
     nav {
-      height: auto; /* Permite altura automática para mais conteúdo */
-      padding: 10px 0; /* Adiciona padding superior e inferior */
+      height: auto;
+      padding: 10px 0;
       display: flex;
-      flex-direction: column; /* Alinha os itens em coluna */
-      align-items: center; /* Centraliza os itens horizontalmente */
+      flex-direction: column;
+      align-items: center;
       background-image: linear-gradient(
         to bottom,
         rgba(84, 17, 97, 0.8),
@@ -339,64 +339,64 @@ footer {
     }
   
     .top-links {
-      width: 100%; /* Garante que a largura ocupe 100% da navbar */
+      width: 100%;
       display: flex;
-      flex-direction: column; /* Alinha os itens em coluna */
-      align-items: center; /* Centraliza os itens horizontalmente */
+      flex-direction: column;
+      align-items: center;
     }
   
     .logo {
-      font-size: 1.5rem; /* Tamanho do logo */
-      margin-bottom: 10px; /* Espaço abaixo do logo */
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
   
     .nav-right {
       display: flex;
-      flex-wrap: wrap; /* Permite que os links se quebrem em várias linhas */
-      justify-content: center; /* Centraliza os links horizontalmente */
-      width: 100%; /* Garante que a largura ocupe 100% da navbar */
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
     }
   
     .nav-right a {
-      flex: 1 1 50%; /* Faz os links ocuparem 50% da largura da navbar */
-      text-align: center; /* Centraliza o texto dos links */
-      padding: 5px; /* Ajusta o padding */
-      font-size: 0.9rem; /* Tamanho da fonte dos links */
-      box-sizing: border-box; /* Inclui padding e bordas na largura total */
+      flex: 1 1 50%;
+      text-align: center;
+      padding: 5px;
+      font-size: 0.9rem;
+      box-sizing: border-box;
     }
   
     .container {
-      display: flex; /* Define a exibição como flexível */
-      flex-direction: column; /* Alinha os itens em coluna */
-      padding: 10px; /* Reduz o padding do container */
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
     }
   
     section {
-      padding: 10px; /* Ajusta o padding das seções */
-      margin-bottom: 10px; /* Margem inferior entre as seções */
+      padding: 10px;
+      margin-bottom: 10px;
     }
   
     section h1 {
-      font-size: 1.5rem; /* Diminui o tamanho do título */
+      font-size: 1.5rem;
     }
   
     section p {
-      font-size: 1rem; /* Diminui o tamanho do parágrafo */
+      font-size: 1rem;
     }
 
     .novo-container {
         display: flex;
-        flex-direction: column; /* Alinha os itens em coluna */
-        align-items: center; /* Centraliza horizontalmente */
+        flex-direction: column;
+        align-items: center;
       }
 
       .caixa-larga {
-        text-align: center; /* Centraliza o texto dentro da caixa */
-        width: 100%; /* Garante que a largura ocupe 100% */
-        margin: 10px 0; /* Espaço entre as caixas */
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
       }
 
       .caixa-larga h3 {
-        margin: 0; /* Remove margens do título para melhor centralização */
+        margin: 0;
       }
   }
