@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Plataforma de Streaming - Aluguel de Filmes</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Top 5</a></li>
+                    <li><a href="#">Recentes</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Em Breve</a></li>
+                </ul>
+            </nav>
+            <br />
+            <h1>FILMES EM DESTAQUE</h1>
+        </header>
+
+        <div class="parallax"></div>
+
+        <section class="section-filmes" id="filmes">
+            <div class="filmes">
+                <div class="filme">
+                    <img src="https://via.placeholder.com/100" alt="Poster do Filme" />
+                    <div class="filme-info">
+                        <h2 class="filme-title">Título do Filme 1</h2>
+                        <p class="filme-description">Descrição breve do filme 1.</p>
+                        <button class="rent-button">Alugar</button>
+                        <h3>Elenco do Filme</h3>
+                        <ol>
+                            <li>Ator 1</li>
+                            <li>Ator 2</li>
+                            <li>Ator 3</li>
+                            <li>Ator 4</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="filme">
+                    <img src="https://via.placeholder.com/100" alt="Poster do Filme" />
+                    <div class="filme-info">
+                        <h2 class="filme-title">Título do Filme 2</h2>
+                        <p class="filme-description">Descrição breve do filme 2.</p>
+                        <button class="rent-button">Alugar</button>
+                        <h3>Elenco do Filme</h3>
+                        <ol>
+                            <li>Ator 1</li>
+                            <li>Ator 2</li>
+                            <li>Ator 3</li>
+                            <li>Ator 4</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="filme">
+                    <img src="https://via.placeholder.com/100" alt="Poster do Filme" />
+                    <div class="filme-info">
+                        <h2 class="filme-title">Título do Filme 3</h2>
+                        <p class="filme-description">Descrição breve do filme 3.</p>
+                        <button class="rent-button">Alugar</button>
+                        <h3>Elenco do Filme</h3>
+                        <ol>
+                            <li>Ator 1</li>
+                            <li>Ator 2</li>
+                            <li>Ator 3</li>
+                            <li>Ator 4</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario" id="formulario">
+            <h3>Queremos conhecer suas preferências</h3>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" />
+
+                <label for="preferencia">Como você prefere assistir filmes?</label>
+                <div>
+                    <input type="radio" id="sozinho" name="companhia" value="sozinho" />
+                    <label for="sozinho">Sozinho</label>
+                </div>
+                <div>
+                    <input type="radio" id="parceiro" name="companhia" value="parceiro" />
+                    <label for="parceiro">Com o(a) parceiro(a)</label>
+                </div>
+                <div>
+                    <input type="radio" id="amigos" name="companhia" value="amigos" />
+                    <label for="amigos">Com amigos</label>
+                </div>
+                <div>
+                    <input type="radio" id="familia" name="companhia" value="familia" />
+                    <label for="familia">Com toda a família</label>
+                </div>
+
+                <label for="estilos">Quais seus estilos de filme favoritos?</label>
+                <div>
+                    <input type="checkbox" id="Romance" name="estilos" value="romance" />
+                    <label for="romance">Romance</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="comedia" name="estilos" value="comedia" />
+                    <label for="comedia">Comédia</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="terror" name="estilos" value="terror" />
+                    <label for="terror">Terror</label>
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        id="suspense"
+                        name="estilos"
+                        value="suspense"
+                    />
+                    <label for="suspense">Suspense</label>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            
+            <h3>Os três filmes mais assistidos na cidade</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gênero</th>
+                        <th>Filme</th>
+                        <th>Direção</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ação</td>
+                        <td>Velozes e furiosos 10</td>
+                        <td>Louis Leterrier</td>
+                    </tr>
+                    <tr></tr>
+                        <td>Ficção Científica</td>
+                        <td>Guardiões da Galáxia vol3</td>
+                        <td>James Gunn</td>
+                    </tr>
+                    <tr>
+                        <td>Animação</td>
+                        <td>Super Mario Bros. - O filme</td>
+                        <td>Aaron Horvath, Michael Jelenic</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>
+                &copy; Todos os direitos reservados. Desenvolvido pela dupla: Nicolas
+                Lobo e Maria Beatriz
+            </p>
+        </footer>
+    </body>
+</html>
