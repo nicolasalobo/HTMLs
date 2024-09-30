@@ -323,156 +323,80 @@ footer {
     border-bottom: 2px solid var(--cor-quaternaria);
 }
 
-/* Estilos responsivos */
-@media (max-width: 480px) {
-    nav .logo {
-        font-size: 1.2rem;
+/* Estilos para telas de até 768px */
+@media (max-width: 768px) {
+    nav {
+      height: auto; /* Permite altura automática para mais conteúdo */
+      padding: 10px 0; /* Adiciona padding superior e inferior */
+      display: flex;
+      flex-direction: column; /* Alinha os itens em coluna */
+      align-items: center; /* Centraliza os itens horizontalmente */
+      background-image: linear-gradient(
+        to bottom,
+        rgba(84, 17, 97, 0.8),
+        rgba(84, 17, 97, 0.4)
+      );
+    }
+  
+    .top-links {
+      width: 100%; /* Garante que a largura ocupe 100% da navbar */
+      display: flex;
+      flex-direction: column; /* Alinha os itens em coluna */
+      align-items: center; /* Centraliza os itens horizontalmente */
+    }
+  
+    .logo {
+      font-size: 1.5rem; /* Tamanho do logo */
+      margin-bottom: 10px; /* Espaço abaixo do logo */
+    }
+  
+    .nav-right {
+      display: flex;
+      flex-wrap: wrap; /* Permite que os links se quebrem em várias linhas */
+      justify-content: center; /* Centraliza os links horizontalmente */
+      width: 100%; /* Garante que a largura ocupe 100% da navbar */
+    }
+  
+    .nav-right a {
+      flex: 1 1 50%; /* Faz os links ocuparem 50% da largura da navbar */
+      text-align: center; /* Centraliza o texto dos links */
+      padding: 5px; /* Ajusta o padding */
+      font-size: 0.9rem; /* Tamanho da fonte dos links */
+      box-sizing: border-box; /* Inclui padding e bordas na largura total */
+    }
+  
+    .container {
+      display: flex; /* Define a exibição como flexível */
+      flex-direction: column; /* Alinha os itens em coluna */
+      padding: 10px; /* Reduz o padding do container */
+    }
+  
+    section {
+      padding: 10px; /* Ajusta o padding das seções */
+      margin-bottom: 10px; /* Margem inferior entre as seções */
+    }
+  
+    section h1 {
+      font-size: 1.5rem; /* Diminui o tamanho do título */
+    }
+  
+    section p {
+      font-size: 1rem; /* Diminui o tamanho do parágrafo */
     }
 
-    nav .top-links a {
-        font-size: 0.9rem;
-        padding: 0 10px;
-    }
+    .novo-container {
+        display: flex;
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: center; /* Centraliza horizontalmente */
+      }
 
-    .parallax-text h1 {
-        font-size: 1.8rem;
-    }
+      .caixa-larga {
+        text-align: center; /* Centraliza o texto dentro da caixa */
+        width: 100%; /* Garante que a largura ocupe 100% */
+        margin: 10px 0; /* Espaço entre as caixas */
+      }
 
-    .parallax-text p {
-        font-size: 1rem;
-    }
-
-    .timeline-date {
-        font-size: 10px;
-    }
-
-    .timeline-content h3 {
-        font-size: 20px;
-    }
-
-    .timeline-content p {
-        font-size: 14px;
-    }
-
-    .caixa-larga h3 {
-        font-size: 20px;
-    }
-
-    .caixa-larga p {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    nav .logo {
-        font-size: 1.4rem;
-    }
-
-    nav .top-links a {
-        font-size: 1rem;
-        padding: 0 12px;
-    }
-
-    .parallax-text h1 {
-        font-size: 2rem;
-    }
-
-    .parallax-text p {
-        font-size: 1.1rem;
-    }
-
-    .timeline-date {
-        font-size: 11px;
-    }
-
-    .timeline-content h3 {
-        font-size: 22px;
-    }
-
-    .timeline-content p {
-        font-size: 15px;
-    }
-
-    .caixa-larga h3 {
-        font-size: 22px;
-    }
-
-    .caixa-larga p {
-        font-size: 15px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    nav .logo {
-        font-size: 1.6rem;
-    }
-
-    nav .top-links a {
-        font-size: 1.1rem;
-        padding: 0 15px;
-    }
-
-    .parallax-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .parallax-text p {
-        font-size: 1.2rem;
-    }
-
-    .timeline-date {
-        font-size: 12px;
-    }
-
-    .timeline-content h3 {
-        font-size: 24px;
-    }
-
-    .timeline-content p {
-        font-size: 16px;
-    }
-
-    .caixa-larga h3 {
-        font-size: 24px;
-    }
-
-    .caixa-larga p {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1200px) {
-    nav .logo {
-        font-size: 1.8rem;
-    }
-
-    nav .top-links a {
-        font-size: 1.2rem;
-    }
-
-    .parallax-text h1 {
-        font-size: 2.8rem;
-    }
-
-    .parallax-text p {
-        font-size: 1.3rem;
-    }
-}
-
-@media (min-width: 1201px) {
-    nav .logo {
-        font-size: 2rem;
-    }
-
-    nav .top-links a {
-        font-size: 1.3rem;
-    }
-
-    .parallax-text h1 {
-        font-size: 3rem;
-    }
-
-    .parallax-text p {
-        font-size: 1.5rem;
-    }
-}
+      .caixa-larga h3 {
+        margin: 0; /* Remove margens do título para melhor centralização */
+      }
+  }
